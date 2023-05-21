@@ -1,12 +1,21 @@
-import { Text, Button, Stack } from "@mantine/core";
+import { Text, Button, Stack, Container, Grid } from "@mantine/core";
+import Body from "~/components/Body";
+import Fields from "~/components/Fileds";
+import  NavbarNested from "~/components/NavBar";
+import Users from "~/components/Users";
 
 export default function Index() {
   return (
-    <Stack align="center" mt={50}>
-      <Text size="xl" weight={500}>
-        Welcome to Mantine!
-      </Text>
-      <Button>Click the button</Button>
-    </Stack>
+    <Grid>
+      <Grid.Col span="auto" bg="#F8F9FA">
+        <NavbarNested />
+      </Grid.Col>
+      <Grid.Col span="auto" bg="#F8F9FA">
+        <Fields />
+      </Grid.Col>
+      <Grid.Col span={7}>
+        <Body />
+      </Grid.Col>
+    </Grid>
   );
 }
